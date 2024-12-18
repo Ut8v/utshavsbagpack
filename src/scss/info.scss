@@ -1,0 +1,27 @@
+.info-div {
+    display: flex;
+}
+.info-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px ;
+    margin-top: auto;
+    background-color: #0A192F ;
+}
+.intro-header {
+    background-color: #0A192F;
+    font-family: fantasy, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4em;
+}
+
+.intro-text {
+    background-color: #0A192F;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+li::marker {
+    color: red;
+}

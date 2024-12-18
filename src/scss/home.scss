@@ -1,0 +1,23 @@
+.info-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.s-icon a .icon{
+    fill: #8892B0;
+    padding: 5px;
+}
+
+.s-icon a:hover .icon {
+    fill: #64FFDA; 
+}

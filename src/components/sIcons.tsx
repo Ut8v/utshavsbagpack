@@ -7,12 +7,12 @@ const SocialIcons: React.FC = () => {
         <div className="social-icons">
             <div className="s-icon">
                 <a href="/">
-                    <FaGithub className="icon" size={60} />
+                    <FaGithub className="icon" size={40} />
                 </a>
             </div>
             <div className="s-icon">
                 <a href="/">
-                    <FaLinkedin className="icon" size={60} />
+                    <FaLinkedin className="icon" size={40} />
                 </a>
             </div>
         </div>

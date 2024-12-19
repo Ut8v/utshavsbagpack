@@ -1,8 +1,8 @@
 import React from "react";
 import '../scss/home.scss';
 import { Helmet } from "react-helmet-async";
-const Info = React.lazy(() => import('../components/info'));
-const Skill = React.lazy(() => import('../components/skills'));
+const Info = React.lazy(() => import('../components/info.tsx'));
+const Skill = React.lazy(() => import('../components/skills.tsx'));
 
 const Home: React.FC = () => {
   return (
@@ -21,7 +21,8 @@ const Home: React.FC = () => {
 
       <meta name="author" content="Utshav Khatiwada" />
       <meta name="robots" content="index, follow" />
-    </Helmet><div className="container mt-5">
+    </Helmet>
+    <div className="container mt-5">
         <div className="row">
           <div className="col-md-8 mt-5">
             <Info />
@@ -31,7 +32,7 @@ const Home: React.FC = () => {
           </div>
           <hr />
         </div>
-      </div></>
+    </div></>
   );
 };
 

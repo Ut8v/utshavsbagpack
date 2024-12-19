@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import mailService from '../service/mailService';
+import mailService from '../service/mailService.ts';
 interface FormData {
     name: string;
     email: string;

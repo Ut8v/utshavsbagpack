@@ -2,13 +2,15 @@
   "compilerOptions": {
     "target": "ES5",
     "jsx": "react-jsx",
-    "module": "ESNext",
+    "module": "NodeNext",
     "lib": ["ES2015", "DOM"],
     "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
     "types": ["vite/client"]
   },
   "include": ["src/**/*", "src/**/*.scss", "src/**/*.css"]

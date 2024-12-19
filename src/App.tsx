@@ -5,12 +5,12 @@ import 'bootstrap/scss/bootstrap.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './scss/root.scss';
 import { FidgetSpinner } from 'react-loader-spinner';
-const TopBar = React.lazy(() => import('./components/topbar'));
-const Footer = React.lazy(() => import('./components/footer'));
-const Home = React.lazy(() => import('./pages/home'));
-const Projects = React.lazy(() => import('./pages/projects'));
-const Contact = React.lazy(() => import('./pages/contact'));
-const ChatBlog= React.lazy(() => import('./components/chat-blog'));
+const TopBar = React.lazy(() => import('./components/topbar.tsx'));
+const Footer = React.lazy(() => import('./components/footer.tsx'));
+const Home = React.lazy(() => import('./pages/home.tsx'));
+const Projects = React.lazy(() => import('./pages/projects.tsx'));
+const Contact = React.lazy(() => import('./pages/contact.tsx'));
+const ChatBlog= React.lazy(() => import('./components/chat-blog.tsx'));
 
 function App() {
   const { ref: homeRef, inView: isHomeVisible } = useInView({ threshold: 0.1 });

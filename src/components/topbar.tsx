@@ -3,8 +3,8 @@ import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import '../scss/topbar.scss';
 import logo from '../assets/favicon.png';
 import { Link } from 'react-router-dom';
-import SocialIcons from './sIcons';
-import ChatModal from './chat';
+import SocialIcons from './sIcons.tsx';
+import ChatModal from './chat.tsx';
 
 const TopBar: React.FC = () => {
   const [showPopup, setShowPopup] = useState(true);

@@ -2,7 +2,7 @@ import React from "react";
 import "../scss/projects.scss";
 import { FidgetSpinner } from "react-loader-spinner";
 import { TbPaperBag } from "react-icons/tb";
-const Experience = React.lazy(() => import('./experience'));
+const Experience = React.lazy(() => import('./experience.tsx'));
 
 const Projects: React.FC = () => {
     const projectlist = [

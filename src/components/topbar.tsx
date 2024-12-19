@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import '../scss/topbar.scss';
 import logo from '../assets/favicon.png';
@@ -7,13 +7,6 @@ import SocialIcons from './sIcons.tsx';
 import ChatModal from './chat.tsx';
 
 const TopBar: React.FC = () => {
-  const [showPopup, setShowPopup] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowPopup(false), 5000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <Navbar expand="lg" className="navbar-custom fixed-top">
       <Container>
@@ -45,11 +38,6 @@ const TopBar: React.FC = () => {
           </Nav>
           <div className="ms-auto d-flex align-items-center chat-model position-relative">
             <ChatModal />
-            {showPopup && (
-              <div className="popup-alert">
-                <span>Hey there, start a chat? </span>
-              </div>
-            )}
           </div>
         </Navbar.Collapse>
       </Container>

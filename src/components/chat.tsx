@@ -93,7 +93,7 @@ useEffect(() => {
             {typing && (
               <div className="chat-message chat-message-bot">
                 <div className="chat-bubble bot">
-                  <em>Bot is typing...</em>
+                  <em>Utshav.AI is typing...</em>
                 </div>
               </div>
             )}

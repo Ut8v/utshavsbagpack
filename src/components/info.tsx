@@ -27,6 +27,10 @@ const Info: React.FC = () => {
                 <li>I am currently pursuing a Bachelor's degree in Information Technology at University of Cincinnati.</li>
             </ul>
             </Card.Text>
+            <Card.Text className="text-info intro-text">
+                <br></br>
+                <h3>If you would like to look at the source code visit my github.</h3>
+            </Card.Text>
         </Card.Body>
     </Card>
     </div>

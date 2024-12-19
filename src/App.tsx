@@ -5,6 +5,7 @@ import 'bootstrap/scss/bootstrap.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './scss/root.scss';
 import { FidgetSpinner } from 'react-loader-spinner';
+import NotFound from './pages/notfound.tsx';
 const TopBar = React.lazy(() => import('./components/topbar.tsx'));
 const Footer = React.lazy(() => import('./components/footer.tsx'));
 const Home = React.lazy(() => import('./pages/home.tsx'));
@@ -49,6 +50,7 @@ function App() {
           </>
         }
       />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </div>
 </Router>

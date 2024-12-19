@@ -25,3 +25,18 @@
 li::marker {
     color: red;
 }
+@media (max-width: 600px) {
+    .info-div {
+        flex-direction: column;
+    }
+    .info-card {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .intro-header {
+        font-size: 2em !important;
+    }
+    .intro-text {
+        font-size: 1em;
+    }
+}

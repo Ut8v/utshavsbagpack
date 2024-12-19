@@ -21,3 +21,19 @@
 .s-icon a:hover .icon {
     fill: #64FFDA; 
 }
+
+@media (max-width: 600px) {
+    .info-class {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .s-icon a .icon {
+        padding: 10px;
+    }
+}

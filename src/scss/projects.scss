@@ -77,3 +77,52 @@
         }
     }
 }
+@media (max-width: 600px) {
+    .projects-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .experience-section {
+        padding: 2rem 1rem;
+
+        .section-title {
+            font-size: 2rem;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .icon {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .experience-list {
+            gap: 1rem;
+        }
+
+        .experience-card {
+            padding: 1rem;
+
+            .company-name {
+                font-size: 1.2rem;
+            }
+
+            .role {
+                font-size: 1rem;
+            }
+
+            .duration {
+                font-size: 0.9rem;
+            }
+
+            .responsibilities {
+                margin-left: 1rem;
+
+                li {
+                    margin-bottom: 0.3rem;
+                }
+            }
+        }
+    }
+}

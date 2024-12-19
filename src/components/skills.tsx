@@ -12,7 +12,7 @@ import { PostgresqlPlainWordmark } from 'devicons-react';
 import { MysqlOriginalWordmark } from 'devicons-react';
 import { CsharpOriginal } from 'devicons-react';
 import { LuBrain } from "react-icons/lu";
-
+import { TypescriptOriginal } from 'devicons-react';
 
 const Skill: React.FC = () => {
     return(
@@ -23,6 +23,8 @@ const Skill: React.FC = () => {
           <div className="col-8 text-center text-white">
             <br/>
             <p><span className="ms-auto"><ReactOriginal size={40}/></span> React</p>
+            <hr/>
+            <p><span><TypescriptOriginal size={40}/></span> TypeScript</p>
             <hr/>
             <p><span className="mr-2"><NodejsOriginalWordmark size={40}/></span> Node.js</p>
             <hr/>

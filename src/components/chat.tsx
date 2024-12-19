@@ -20,7 +20,6 @@ const ChatModal = () => {
     setShow(!show);
 }
   const handleClose = () => setShow(false);
-  console.log(show);
   useEffect(() => {
     const newSocket = io(apiUrl);
     setSocket(newSocket);

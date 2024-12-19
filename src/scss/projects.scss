@@ -1,0 +1,81 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px ;
+    flex-direction: row;
+    color: white;
+    margin-top: 20%;
+}
+
+
+
+.experience-section {
+    padding: 4rem 2rem;
+    background-color:  #0A192F;
+    color: #333;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        .icon {
+            margin-right: 0.5rem;
+            color: red;
+        }
+    }
+
+    .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .experience-card {
+        background:  #0A192F;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .role {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            color: white;
+        }
+
+        .duration {
+            font-size: 1rem;
+            color: white;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .responsibilities {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            color: white;
+
+            li {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}

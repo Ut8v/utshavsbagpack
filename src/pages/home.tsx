@@ -5,7 +5,7 @@ const Skill = React.lazy(() => import('../components/skills'));
 
 const Home: React.FC = () => {
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div className="row">
         <div className="col-md-8 mt-5">
           <Info />
@@ -13,6 +13,7 @@ const Home: React.FC = () => {
         <div className="col-md-4">
           <Skill />
         </div>
+        <hr />
       </div>
     </div>
   );

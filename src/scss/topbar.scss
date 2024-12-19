@@ -1,0 +1,93 @@
+
+.navbar-custom {
+    background-color: #0A192F; 
+    padding: 1rem;
+    position: fixed;
+    height: 60px;
+  }
+  
+  .navbar-custom .navbar-brand {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .nav-link {
+    color: #dcdcdc;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  .nav-link:active{
+    color: #ffffff;
+  }
+  
+  .navbar-custom .navbar-brand:hover {
+    color: #f8f9fa;
+  }
+  
+  .navbar-custom .nav-link {
+    color: #dcdcdc;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+  .navbar-custom .nav-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
+  .navbar-custom .nav-dropdown .dropdown-link {
+    color: #343a40;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+  }
+  
+  .navbar-custom .nav-dropdown .dropdown-link:hover {
+    background-color: #f8f9fa;
+    color: black;
+    border-radius: 5px;
+  }
+  
+  .navbar-custom .navbar-toggler {
+    background-color: #ffffff;
+    border: none;
+  }
+  
+  .chat-model {
+    position: relative;
+  
+    .popup-alert {
+      position: absolute;
+      top: 60px; 
+      right: 0;  
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 14px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      animation: fade-in 0.3s ease-out;
+  
+      span {
+        color: #333;
+      }
+    }
+  
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  

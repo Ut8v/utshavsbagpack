@@ -3,14 +3,16 @@
 }
 .app-container {
     display: flex;
+    flex-direction: column;
     height: 100vh; 
     background-color:#0A192F;
   }
   .nav-container{
     display: flex;
-    flex-direction: row;
-    width: 250px;
+    justify-content: center;
+    align-items: center;
     background-color: #0A192F;
+    padding: 2rem;
   }
 
   .main-content {
@@ -21,6 +23,19 @@
     height: 100%;
     overflow: auto;
     background-color:  #0A192F;
+  }
+
+  .projects-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem;
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px ;
+    flex-direction: row;
+    color: white;
   }
   
   .main-content > .top-bar {
@@ -41,3 +56,23 @@
     background-color: #0A192F;
   }
   
+  .section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .chat-model {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: #0A192F;
+    
+  }
+
+  .section.visible {
+    opacity: 1;
+  }

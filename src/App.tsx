@@ -1,51 +1,44 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
 import 'bootstrap/scss/bootstrap.scss';
 import './scss/root.scss';
 import { FidgetSpinner } from 'react-loader-spinner';
-//import TopBar from './components/topbar.tsx';
-import Footer from './components/footer.tsx';
-import TopBar from './components/topbar.tsx';
+const TopBar = React.lazy(() => import('./components/topbar.tsx'));
+const Footer = React.lazy(() => import('./components/footer.tsx'));
 const Home = React.lazy(() => import('./pages/home.tsx'));
+const Projects = React.lazy(() => import('./pages/projects.tsx'));
 
 function App() {
-  const [loading, setLoading] = React.useState(true);
+  const { ref: homeRef, inView: isHomeVisible } = useInView({ threshold: 0.1 });
+  const { ref: projectsRef, inView: isProjectsVisible } = useInView({ threshold: 0.1 });
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
   return (
     <Router>
+      <div className="nav-container sticky-top">
+        <TopBar />
+      </div>
+
       <div className="app-container">
-      <div className="nav-container">
-            <TopBar/>
-      </div>
-      { loading ? 
-      <div className="loader-container">
-        <FidgetSpinner />
-      </div> :
-        <>
-        <div className="main-content">
-            <React.Suspense fallback=
-              {
-                <div className="loader-container">
-                  <FidgetSpinner />
-                </div> 
-              }>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-            </Routes>
-            </React.Suspense>
-              <Footer />
+        <><div ref={homeRef} id="home-section" className={`section ${isHomeVisible ? 'visible' : ''}`}>
+            <Suspense fallback={<FidgetSpinner />}>
+              <Home />
+            </Suspense>
+          </div><div ref={projectsRef} id="projects-section" className={`section ${isProjectsVisible ? 'visible' : ''}`}>
+              <Suspense fallback={<FidgetSpinner />}>
+                <Projects />
+              </Suspense>
             </div></>
-       }
       </div>
+      <Footer />
     </Router>
   );
 }
 
 export default App;
+
+
+
+
+
 

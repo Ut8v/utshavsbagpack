@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "jsx": "react-jsx",
-    "lib": ["ES2015", "DOM"],
-    "module": "ES2020",
+    "target": "ESNext",
+    "module": "NodeNext",
+    "lib": ["ES2023", "DOM"],
+    "moduleResolution": "nodenext",
     "strict": true,
+    "jsx": "react-jsx",
     "esModuleInterop": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
-    "types": ["vite/client"]
+    "allowImportingTsExtensions": true ,
+    "types": ["vite/client"],
+    "noEmit": true
   },
-  "include": ["src/**/*", "src/**/*.scss", "src/**/*.css"]
+ "include": ["src/**/*", "src/**/*.scss", "src/**/*.css"]
 }
+

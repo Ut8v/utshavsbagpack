@@ -1,4 +1,4 @@
-import Chart from './chart';
+import Chart from './chart.tsx';
 import ReactMarkdown from 'react-markdown';
 import '../scss/blog.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';

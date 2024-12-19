@@ -6,12 +6,12 @@ const SocialIcons: React.FC = () => {
     return (
         <div className="social-icons">
             <div className="s-icon">
-                <a href="/">
+                <a href="https://github.com/Ut8v" target="_blank">
                     <FaGithub className="icon" size={40} />
                 </a>
             </div>
             <div className="s-icon">
-                <a href="/">
+                <a href="https://www.linkedin.com/in/utshavkhatiwada/" target="_blank">
                     <FaLinkedin className="icon" size={40} />
                 </a>
             </div>

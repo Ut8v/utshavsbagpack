@@ -18,12 +18,14 @@ const TopBar: React.FC = () => {
     <Navbar expand="lg" className="navbar-custom fixed-top">
       <Container>
         <Navbar.Brand className="brand">
+        <Link to="/" className="brand-link">
           <img
             src={logo}
             alt="Logo"
             height="30"
             className="d-inline-block align-top"
           />
+        </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -19,26 +19,26 @@ const Projects: React.FC = () => {
     ];
 
     return (
-       <div className="projects-container container">
-            <div className="row">
-                <div className="col-8">
-                    <React.Suspense fallback={<div className="loading"><FidgetSpinner /></div>}>
-                        <Experience />
-                    </React.Suspense>
-                </div>
-                <div className="col-4 mt-5">
-                    <h1 className="section-title text-center mb-4"><TbPaperBag fill="green"/> Projects</h1>
-                    <hr />
-                    {projectlist.map((project, index) => (
-                        <div className="project-card mb-4 p-4 shadow rounded" key={index}>
-                            <h2 className="project-title mb-2">{project.name}</h2>
-                            <p className="project-description mb-3">{project.description}</p>
-                            {project.link && <a href={project.link} className="project-link btn btn-primary" target="_blank" rel="noopener noreferrer">View Source Code</a>}
-                        </div>
-                    ))}
-                </div>
+    <div className="projects-container container">
+        <div className="row">
+            <div className="col-md-8 order-1 order-md-1">
+                <React.Suspense fallback={<div className="loading"><FidgetSpinner /></div>}>
+                    <Experience />
+                </React.Suspense>
+            </div>
+            <div className="col-md-4 mt-5 order-2 order-md-2">
+                <h1 className="section-title text-center mb-4"><TbPaperBag fill="green"/> Projects</h1>
+                <hr />
+                {projectlist.map((project, index) => (
+                    <div className="project-card mb-4 p-4 shadow rounded" key={index}>
+                        <h2 className="project-title mb-2">{project.name}</h2>
+                        <p className="project-description mb-3">{project.description}</p>
+                        {project.link && <a href={project.link} className="project-link btn btn-primary" target="_blank" rel="noopener noreferrer">View Source Code</a>}
+                    </div>
+                ))}
             </div>
         </div>
+    </div>
     );
 };
 

@@ -2,11 +2,11 @@
   "compilerOptions": {
     "target": "ES5",
     "jsx": "react-jsx",
-    "module": "NodeNext",
     "lib": ["ES2015", "DOM"],
+    "module": "ES2020",
     "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "noEmit": true,

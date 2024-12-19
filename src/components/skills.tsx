@@ -11,13 +11,15 @@ import { ExpressOriginal } from 'devicons-react';
 import { PostgresqlPlainWordmark } from 'devicons-react';
 import { MysqlOriginalWordmark } from 'devicons-react';
 import { CsharpOriginal } from 'devicons-react';
+import { LuBrain } from "react-icons/lu";
 
 
 const Skill: React.FC = () => {
     return(
-        <div className="container skill-container display-flex justify-content-center align-items-center">
-        <h1 className="text-center text-white mt-5 skill-txt">Skills<hr/></h1>
+    <div className="container skill-container display-flex justify-content-center align-items-center">
+        <h1 className="text-center text-white mt-5 skill-txt"><LuBrain fill="purple" /> Skills<hr/></h1>
         <div className="row">
+
           <div className="col-8 text-center text-white">
             <br/>
             <p><span className="ms-auto"><ReactOriginal size={40}/></span> React</p>
@@ -33,6 +35,7 @@ const Skill: React.FC = () => {
             <p><span><DockerPlain size={40}/></span> Docker</p>
             <hr/>
           </div>
+
           <div className="col-4 text-center text-white">
             <br/>   
             <hr/>
@@ -47,8 +50,9 @@ const Skill: React.FC = () => {
             <p><span><BootstrapPlain size={40}/></span> Bootstrap</p>
             <hr/>
           </div>
+
         </div>
-      </div>
+    </div>
     )
 };
 

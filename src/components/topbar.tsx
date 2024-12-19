@@ -28,14 +28,8 @@ const TopBar: React.FC = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-            <Link to="/projects" className="nav-link">
-              Projects
-            </Link>
             <NavDropdown
-              title="More"
+              title="Blogs"
               id="basic-nav-dropdown"
               className="nav-dropdown"
             >

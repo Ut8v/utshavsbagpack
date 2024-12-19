@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import { IoChatboxEllipsesSharp } from "react-icons/io5";
 import { io, Socket } from "socket.io-client";
@@ -10,14 +10,12 @@ interface Message {
 }
 
 const ChatModal = () => {
-  const [show, setShow] = useState(false);
-  const [input, setInput] = useState("");
+  const [show, setShow] = useState<boolean>(false);
+  const [input, setInput] = useState<string>("");
   const [chatHistory, setChatHistory] = useState<Message[]>([]);
   const [socket, setSocket] = useState<Socket | null>(null);
   const [typing, setTyping] = useState<boolean>(false);
   const apiUrl = import.meta.env.VITE_API_URL;
-  console.log(apiUrl);
-
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
 

@@ -3,7 +3,7 @@ import { Navbar, Container } from 'react-bootstrap';
 
 const Footer: React.FC = () => {
   return (
-    <Navbar expand="lg" className="mt-auto py-3 fixed-bottom">
+    <Navbar expand="lg" className="mt-auto py-3">
       <Container>
         <div className="text-center w-100 mt-3 text-light">
           <hr/>

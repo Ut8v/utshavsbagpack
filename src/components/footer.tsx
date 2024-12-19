@@ -1,14 +1,10 @@
 import React from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import SocialIcons from './sIcons';
+import { Navbar, Container } from 'react-bootstrap';
 
 const Footer: React.FC = () => {
   return (
-    <Navbar expand="lg" className="mt-auto py-3">
+    <Navbar expand="lg" className="mt-auto py-3 fixed-bottom">
       <Container>
-        <Nav className="mx-auto">
-        <SocialIcons />
-        </Nav>
         <div className="text-center w-100 mt-3 text-light">
           <hr/>
           &copy; {new Date().getFullYear()} Utshav Khatiwada. 

@@ -1,21 +1,62 @@
-import React from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import '../scss/topbar.scss';
+import logo from '../assets/favicon.png';
+import { Link } from 'react-router-dom';
+import SocialIcons from './sIcons';
+import ChatModal from './chat';
 
 const TopBar: React.FC = () => {
+  const [showPopup, setShowPopup] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPopup(false), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Navbar bg="black" variant="dark" expand="lg" className="sticky-top">
-      <Navbar.Toggle aria-controls="navbar-nav" />
-      <Navbar.Collapse id="navbar-nav">
-        <Nav className="ms-auto">
-          <Nav.Link href="/home">Home</Nav.Link>
-          <Nav.Link href="/about">About</Nav.Link>
-          <Nav.Link href="/contact">Contact</Nav.Link>
-          <Nav.Link href='/projects'>Projects</Nav.Link>
-          <NavDropdown title="Blogs" id="blogs-dropdown">
-            <NavDropdown.Item href="/action">Chat-blog</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-      </Navbar.Collapse>
+    <Navbar expand="lg" className="navbar-custom fixed-top">
+      <Container>
+        <Navbar.Brand className="brand">
+          <img
+            src={logo}
+            alt="Logo"
+            height="30"
+            className="d-inline-block align-top"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+            <Link to="/projects" className="nav-link">
+              Projects
+            </Link>
+            <NavDropdown
+              title="More"
+              id="basic-nav-dropdown"
+              className="nav-dropdown"
+            >
+              <NavDropdown.Item>
+                <Link to="/chat-blog" className="dropdown-link">
+                  Chat-Blog
+                </Link>
+              </NavDropdown.Item>
+            </NavDropdown>
+            <SocialIcons />
+          </Nav>
+          <div className="ms-auto d-flex align-items-center chat-model position-relative">
+            <ChatModal />
+            {showPopup && (
+              <div className="popup-alert">
+                <span>Hey there, start a chat? </span>
+              </div>
+            )}
+          </div>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 };

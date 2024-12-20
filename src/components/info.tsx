@@ -30,7 +30,7 @@ const Info: React.FC = () => {
             </Card.Text>
             <Card.Text className="text-info intro-text">
                 <br></br>
-                <h3>If you would like to look at the source code visit my github at <a href="https://github.com/Ut8v" target="_blank"><FaGithub fill="green" size={40}/></a></h3>
+                <h3>If you would like to look at the source code visit my github at <a href="https://github.com/Ut8v/utshavsbagpack" target="_blank"><FaGithub fill="green" size={40}/></a></h3>
             </Card.Text>
         </Card.Body>
     </Card>

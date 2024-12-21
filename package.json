@@ -15,6 +15,7 @@
     "bootstrap": "^5.3.3",
     "devicons-react": "^1.4.0",
     "emailjs-com": "^3.2.0",
+    "file-saver": "^2.0.5",
     "mdb-react-ui-kit": "^9.0.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.6",
@@ -26,12 +27,14 @@
     "react-loader-spinner": "^6.1.6",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^7.0.2",
+    "react-use-downloader": "^1.2.8",
     "reactflow": "^11.11.4",
     "sass": "^1.83.0",
     "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
+    "@types/file-saver": "^2.0.7",
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.17",
     "@types/react-dom": "^18.3.5",

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import 'bootstrap/scss/bootstrap.scss';
@@ -18,6 +18,15 @@ function App() {
   const { ref: projectsRef, inView: isProjectsVisible } = useInView({ threshold: 0.1 });
   const { ref: contactRef, inView: isContactVisible } = useInView({ threshold: 0.1 });
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }
+  , []);
+
   return (
 <Router>
   <div className="nav-container sticky-top">
@@ -25,6 +34,13 @@ function App() {
   </div>
 
   <div className="app-container">
+    {loading ? 
+      <div className='loader-container'>
+        <FidgetSpinner backgroundColor='red' ballColors={["white", "white", "white"]} width={200} height={200} />
+        <FidgetSpinner backgroundColor='white' ballColors={["black", "black", "black"]} width={200} height={200} />
+        <FidgetSpinner backgroundColor='blue' ballColors={["white", "white", "white"]} width={200} height={200}/>
+      </div>
+    : 
     <Routes>
       <Route path="/chat-blog" element={<ChatBlog />} />
       <Route
@@ -52,6 +68,7 @@ function App() {
       />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    }
   </div>
 </Router>
   );

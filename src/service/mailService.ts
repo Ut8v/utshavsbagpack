@@ -4,7 +4,7 @@ const templateID = import.meta.env.VITE_TEMPLATE_ID;
 const userID = import.meta.env.VITE_USER_ID;
 
 class mailService {
-    static async sendMail(formData: { name: string; email: string; message: string; }) {
+  static async sendMail(formData: { name: string; email: string; message: string; }) {
     const response = await emailjs.send(
         serviceID, 
         templateID, 

@@ -4,7 +4,9 @@ import { FaBriefcase } from "react-icons/fa";
 const Experience: React.FC = () => {
     const experiences = [
         {
-            company: "University of Cincinnati Information Technology Solutions Center",
+            image: "https://media.licdn.com/dms/image/v2/C4E0BAQED1h_GavczqQ/company-logo_200_200/company-logo_200_200/0/1630628869629/uc_itsc_logo?e=1743033600&v=beta&t=_HExRgXYF9PB2Zm8fQx_OadtX48Jcr19bGZtH_BtVcM",
+            company: "University of Cincinnati Information Technology Solution Center",
+            techStack: ["Technologies: ","React, ", "TypeScript, ", "Express.js, ", "PostgreSQL, ", "MySQL,", "Docker"],
             role: "Software Development Co-op",
             duration: "Aug 2024 - Present",
             responsibilities: [
@@ -14,7 +16,9 @@ const Experience: React.FC = () => {
             ],
         },
         {
+            image: "https://gmicompanies.com/wp-content/uploads/2024/07/GMi-Logo-79px.png",
             company: "GMi Companies",
+            techStack: ["Technologies: ", "C/AL, ", "Microsoft Dynamics NAV 2018, SQL"],
             role: "Information Services Intern",
             duration: "Aug 2023 - July 2024",
             responsibilities: [
@@ -35,9 +39,17 @@ const Experience: React.FC = () => {
                 <div className="experience-list">
                     {experiences.map((exp, index) => (
                         <div key={index} className="experience-card">
+                           <div className="company-logo-container">
+                            <img src={exp.image} alt={exp.company} className="company-logo"  />
+                            </div>
                             <h2 className="company-name">{exp.company}</h2>
                             <p className="role">{exp.role}</p>
                             <p className="duration">{exp.duration}</p>
+                            <div className="tech-stack">
+                                {exp.techStack.map((tech, i) => (
+                                    <span key={i} className="tech text-info">{tech}</span>
+                                ))}
+                            </div>
                             <ul className="responsibilities">
                                 {exp.responsibilities.map((task, i) => (
                                     <li key={i}>{task}</li>

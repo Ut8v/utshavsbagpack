@@ -50,6 +50,7 @@ function App() {
                 <Projects />
               </Suspense>
             </div>
+            
             <div ref={contactRef} id="contact-section" className={`section ${isContactVisible ? 'visible' : ''}`}>
               <Suspense fallback={<FidgetSpinner />}>
                 <Contact />

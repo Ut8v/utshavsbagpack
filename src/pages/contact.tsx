@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import mailService from '../service/mailService.ts';
+import { MdEmail } from "react-icons/md";
+import '../scss/contact.scss';
 interface FormData {
     name: string;
     email: string;
@@ -46,7 +48,15 @@ const ContactPage: React.FC = () => {
     <Container className="my-5 mb-5">
       <Row className="justify-content-center">
         <Col md={8}>
-          <h1 className="text-center text-white mb-4">Contact Me</h1>
+          <h1 className="text-center text-white mb-4 mt-5">Contact Me</h1>
+          <div className='text-center text-white mb-3'>
+            <div className="s-icon">
+                <a href="mailto:khatiwuv@mail.uc.edu" className='text-center text-white mb-3'>
+                You can also reach me via my email:  
+                    <MdEmail className="icon" size={40} fill='gray' />
+                </a>
+            </div>
+           </div>
          {showMessage && <p className="text-center text-info">{message}</p>}
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formName">

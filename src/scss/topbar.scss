@@ -22,6 +22,10 @@
   .nav-link:active{
     color: #ffffff;
   }
+
+  .shadow-navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
   
   .navbar-custom .navbar-brand:hover {
     color: #f8f9fa;

@@ -13,6 +13,7 @@ import {
 
 import 'reactflow/dist/style.css';
 
+// Define the initial nodes and edges of the flowchart
 const initialNodes: Node[] = [
     { id: '1', position: { x: 100, y: 100 }, data: { label: 'Server Starts' }, draggable: false },
     { id: '2', position: { x: 400, y: 100 }, data: { label: 'Load NLP Model' }, draggable: false },
@@ -26,6 +27,7 @@ const initialNodes: Node[] = [
     { id: '10', position: { x: 1600, y: 100 }, data: { label: 'Return Matched Response' }, draggable: false },
 ];
 
+// Define the initial edges of the flowchart
 const initialEdges: Edge[] = [
     { id: 'e1-2', source: '1', target: '2' },
     { id: 'e2-3', source: '2', target: '3' },

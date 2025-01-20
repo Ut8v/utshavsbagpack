@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 
 const Footer: React.FC = () => {
+  
   return (
     <Navbar expand="lg" className="mt-auto py-3">
       <Container>

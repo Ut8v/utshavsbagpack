@@ -23,7 +23,7 @@ const Info: React.FC = () => {
                  <hr/>
                 <li>I am also proficient in Java and C#, with a strong foundation in both frontend and backend development.</li>
                 <hr/>
-                <li>Currently, I am pursuing a Bachelor of Science in Information Technology at the University of Cincinnati.</li>
+                <li>Currently, I am pursuing a Bachelor of Science in Information Technology at University of Cincinnati.</li>
             </ul>
             </Card.Text>
             <Card.Text className="text-info intro-text">

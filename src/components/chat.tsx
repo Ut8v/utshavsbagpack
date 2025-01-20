@@ -20,6 +20,8 @@ const ChatModal = () => {
     setShow(!show);
 }
   const handleClose = () => setShow(false);
+
+  //connect to the backend
   useEffect(() => {
     const newSocket = io(apiUrl);
     setSocket(newSocket);
@@ -31,7 +33,7 @@ const ChatModal = () => {
         { text: data, sender: "Utshav.AI" },
       ]);
     });
-
+    //listen for typing event
     newSocket.on("typing", () => {
       setTyping(true);
     });
@@ -40,7 +42,8 @@ const ChatModal = () => {
       newSocket.disconnect();
     };
   }, [apiUrl]);
-
+ 
+  //send message to the backend
   const sendMessage = () => {
     if (socket && input.trim()) {
       setChatHistory((prevHistory) => [
@@ -52,7 +55,8 @@ const ChatModal = () => {
       setInput("");
     }
   };
-
+  
+//wait for 5 seconds before showing the chat
 useEffect(() => {
     const timer = setTimeout(() => {
         handleShow();

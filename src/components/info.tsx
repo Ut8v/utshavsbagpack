@@ -11,7 +11,7 @@ const Info: React.FC = () => {
                 <Nav variant="pills" defaultActiveKey="#first"> 
                     <Nav.Item> 
                         <Nav.Link className="disabled text-white intro-header">Hi, I am Utshav Khatiwada</Nav.Link>
-                        <p className="text-info">Open to co-op opportunities for Fall 2025</p>
+                        <p className="text-info">Open to co-op/internship opportunities</p>
                         <hr className="text-info"/>
                     </Nav.Item>
                 </Nav>
